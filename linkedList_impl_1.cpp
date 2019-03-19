@@ -1,4 +1,5 @@
 /*
+	Very very simple impl for SSL,Not generic SLL impl
 	Reference : https://www.geeksforgeeks.org/linked-list-set-1-introduction/
 */
 #include<bits/stdc++.h>
@@ -9,6 +10,14 @@ class Node { // ---------------------------------- Start Node
 		int data;				// any data, int in this case
 		Node * next;			// class pointer
 }; // -----------------------------------------------  End Node
+
+void printList(Node*n) {
+	for (; n != NULL;)
+	{
+		cout << n->data << "\n";
+		n = n->next;
+	}
+}
 
 int main(int argc, char const *argv[])
 {
@@ -44,10 +53,12 @@ int main(int argc, char const *argv[])
 	head->data = 1;			// assign any random data in first node
 	head->next = Second;	// Link first node with the second node
 	Second->data	= 2;
-	Second->next	= third;
+	Second->next	= Third;
 	Third->data		= 3;
 	Third->next		= NULL;
 
+	// Print all SLL nodes
+	printList(head);
 
 	return 0;
 }
