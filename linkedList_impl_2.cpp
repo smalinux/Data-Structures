@@ -87,17 +87,33 @@ public:
     int nodeNum() {
     	return nodeCount;
     }
+    int getNthNode(int n) {		// Created by my mind : ))
+    	if ( n <= nodeCount ) {
+    		IntSLLNode*p;
+    		for ( p = head; n == 0; --n, p = p->next );
+    		return p->data;
+    	} else {
+    		return -1;
+    	}
+    }
 };
 
 int main(int argc, char const *argv[])
 {	
 	IntSLList cuteList;
+	IntSLList x;
 	cuteList.addToHead(5);
+	x.addToHead(5);
+	x.addToHead(5);
+	x.addToHead(5);
+	x.addToHead(5);
 	cuteList.addToHead(50);
 	cuteList.addToHead(500);
 	cuteList.printAll();
 	cuteList.deleteFromTail();
 	cuteList.printAll();
-	cout << cuteList.nodeNum(  );
+	cout << x.nodeNum(  );
+	cout << "\n";
+	cout << "nth node :" << cuteList.getNthNode(2);
 	return 0;
 }
