@@ -88,9 +88,9 @@ public:
     	return nodeCount;
     }
     int getNthNode(int n) {		// Created by my mind : ))
-    	if ( n <= nodeCount ) {
+    	if ( n < nodeCount ) {				// n from 0, nodeCount from 1
     		IntSLLNode*p = head;
-    		while( --n >= 0 ) p = p->next;
+    		while( n-- > 0 ) p = p->next;
     		return p->data;
     	} else {
     		cout << "Out of the range\n";
@@ -113,8 +113,8 @@ int main(int argc, char const *argv[])
 	cuteList.printAll();
 	cuteList.deleteFromTail();
 	cuteList.printAll();
-	cout << x.nodeNum(  );
+	cout << cuteList.nodeNum(  );
 	cout << "\n";
-	cout << "nth node :" << cuteList.getNthNode( 1 );
+	cout << "nth node :" << cuteList.getNthNode( 2 );
 	return 0;
 }
