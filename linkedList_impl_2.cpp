@@ -89,10 +89,11 @@ public:
     }
     int getNthNode(int n) {		// Created by my mind : ))
     	if ( n <= nodeCount ) {
-    		IntSLLNode*p;
-    		for ( p = head; n == 0; --n, p = p->next );
+    		IntSLLNode*p = head;
+    		while( --n >= 0 ) p = p->next;
     		return p->data;
     	} else {
+    		cout << "Out of the range\n";
     		return -1;
     	}
     }
@@ -114,6 +115,6 @@ int main(int argc, char const *argv[])
 	cuteList.printAll();
 	cout << x.nodeNum(  );
 	cout << "\n";
-	cout << "nth node :" << cuteList.getNthNode(2);
+	cout << "nth node :" << cuteList.getNthNode( 1 );
 	return 0;
 }
