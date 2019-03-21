@@ -1,5 +1,6 @@
 /*
-
+Double linked list
+Ref:    Data-Structures-Algorithms-Adam-Drozdek
 */
 #include<bits/stdc++.h>
 using namespace std;
