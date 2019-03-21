@@ -7,7 +7,7 @@ class IntSLLNode
 {
 public:
 	int data;
-	IntSLLNode * next;
+	IntSLLNode * next;		// self-referential : ))
 	IntSLLNode() {
 		next = 0;
 	}
