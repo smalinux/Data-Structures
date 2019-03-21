@@ -1,6 +1,10 @@
 /*
 Double linked list
 Ref:    Data-Structures-Algorithms-Adam-Drozdek
+
+Features:
+- advanced averloaded function: operator<<
+- Template data type
 */
 #include<bits/stdc++.h>
 using namespace std;
@@ -42,7 +46,8 @@ public:
 	~DoublyLinkedList() {
         clear();
     };
-	bool isEmpty()      { return head == 0; }
+	//  Should to check whether the list is not empty before attempting to delete the last node
+    bool isEmpty()      { return head == 0; }
     void setToNull()    { head = tail = 0; }
 	void addToHead(const T& val) {
 		if (head != 0)
